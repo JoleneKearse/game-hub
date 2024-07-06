@@ -17,7 +17,7 @@ const theme = extendTheme({ config, colors: {
     800: "#660198",
     900: "#400060",
     950: "#2F0047"
-  }
+  },
 } });
 
 export default theme;
