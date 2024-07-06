@@ -10,6 +10,7 @@ function App() {
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
       }}
+      bgColor="brand.950"
     >
       <GridItem area="nav">
         <NavBar />
