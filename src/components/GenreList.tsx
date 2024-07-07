@@ -5,12 +5,12 @@ import { GenreListSkeleton } from "./GenreListSkeleton";
 
 interface GenreListProps {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-export function GenreList({ onSelectGenre }: GenreListProps) {
+export function GenreList({ onSelectGenre, selectedGenre }: GenreListProps) {
   const { data, isLoading, error } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
 
   if (error) return null;
   return (
@@ -26,7 +26,15 @@ export function GenreList({ onSelectGenre }: GenreListProps) {
                 borderRadius={8}
                 src={getCroppedImageUrl(genre.image_background)}
               />
-              <Button onClick={() => onSelectGenre(genre)} fontSize="lg" variant="link">{genre.name}</Button>
+              <Button
+                fontWeight={genre.id === selectedGenre?.id ? 'bold' : 'normal'}
+                color={genre.id === selectedGenre?.id ? "brand.400" : "brand.100"}
+                onClick={() => onSelectGenre(genre)}
+                fontSize="lg"
+                variant="link"
+              >
+                {genre.name}
+              </Button>
             </HStack>
           </ListItem>
         ))}
