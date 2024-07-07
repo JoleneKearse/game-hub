@@ -1,4 +1,4 @@
-import { Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 
 import useGames from "../hooks/useGames";
 
@@ -18,7 +18,6 @@ export function GameGrid({ selectedGenre }: GameGridProps) {
   return (
     <>
       {error && <Text>{error}</Text>}
-      {selectedGenre && <Heading size="3xl" color="brand.400">{selectedGenre.name} Titles</Heading>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         spacing="1.5rem"
