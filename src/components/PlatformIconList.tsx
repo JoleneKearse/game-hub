@@ -33,7 +33,7 @@ export function PlatformIconList({ platforms }: PlatformIconListProps) {
   return (
     <HStack marginY={1}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="brand.200" key={platform.id} />
+        <Icon as={iconMap[platform.slug]} color="brand.200" key={platform.id} title={platform.name} />
       ))}
     </HStack>
   );
