@@ -5,6 +5,7 @@ import getCroppedImageUrl from "../services/imgUrl";
 
 import { PlatformIconList } from "./PlatformIconList";
 import { CriticScore } from "./CriticScore";
+import { Emoji } from "./Emoji";
 
 interface GameCardProps {
   game: Game;
@@ -23,6 +24,7 @@ export function GameCard({ game }: GameCardProps) {
         </HStack>
         <Heading fontSize="2xl" color="brand.400">
           {game.name}
+          <Emoji rating={game.rating_top} />
         </Heading>
       </CardBody>
     </Card>
