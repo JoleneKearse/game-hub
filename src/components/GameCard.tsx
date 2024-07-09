@@ -13,7 +13,7 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
   return (
-    <Card height="24rem">
+    <Card height={["26rem", "24rem"]}>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
