@@ -13,7 +13,7 @@ interface GameCardProps {
 
 export function GameCard({ game }: GameCardProps) {
   return (
-    <Card>
+    <Card height="24rem">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
@@ -22,7 +22,7 @@ export function GameCard({ game }: GameCardProps) {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="2xl" color="brand.400">
+        <Heading fontSize="2xl" color="brand.400" noOfLines={1} title={game.name}>
           {game.name}
           <Emoji rating={game.rating_top} />
         </Heading>
