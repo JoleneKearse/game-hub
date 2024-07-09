@@ -28,7 +28,6 @@ function App() {
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
       }}
-      bgColor="brand.950"
       templateColumns={{
         base: "1fr",
         lg: "12rem 1fr",
